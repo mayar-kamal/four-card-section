@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grey: hsl(229, 6%, 66%);
+  --light-grey: hsl(0, 0%, 98%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+#technology {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+}
+#technology .technology-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  text-align: center;
+}
+.heading h1 {
+  color: var(--very-dark-blue);
+  font-weight: 200;
+  font-size: 32px;
+}
+.heading h2 {
+  font-weight: 600;
+  color: var(--very-dark-blue);
+}
+.heading p {
+  text-align: center;
+  color: var(--grey);
+  margin-top: 20px;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #fff;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 2px 5px 10px rgb(0, 0, 0, 0.1);
+}
+.row .card-1 {
+  margin-bottom: 30px;
+  border-top: 4px solid var(--red);
+}
+.row .card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--very-dark-blue);
+}
+.row .card p {
+  font-size: 14px;
+  color: var(--grey);
+}
+
+.row .card img {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.row .col-1 {
+  border-top: 4px solid var(--cyan);
+}
+.row .card-2 {
+  border-top: 4px solid var(--orange);
+}
+
+.row .col-3 {
+  border-top: 4px solid var(--blue);
+}
+
+@media (max-width: 700px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .heading h1 {
+    font-size: 25px;
+  }
+  .heading h2 {
+    font-size: 25px;
+  }
+  .container {
+    padding: 2rem;
+  }
+}
